@@ -9,23 +9,28 @@
 </head>
 
 <body>
+    <!-- option 1 -->
     <h1 onclick="console.log('i am click')">domer aj k spcial event</h1>
     <button onclick="console.log(7)">click me</button>
     <button onclick="console.log(65)">Another button</button>
     <br>
+    <!-- potion 2 -->
     <button onclick="document.body.style.backgroundColor='yellow'">make yellow</button>
+    <!-- option 3 -->
     <button onclick="makered()">make red</button>
-    <button onclick="make-blue">Make Blue</button>
+    <!-- option 4 -->
+    <button id="Make-blue">Make Blue</button>
+    <!-- option 5 -->
+    <button id="Make-Pink">Make Pink</button>
+    <!-- option 6 -->
+    <button id="make-green">Make Green</button>
 
+    <!-- optional final ja amra use korbo all time -->
+    <button id="make-goldenrod">make goldens</button>
 
     <script src="js file/even.js"></script>
     <script>
-        const MakeBlueButton = document.getElementById('make-blue');
-        MakeBlueButton.onclick = makeBlue();
 
-        function makeBlue(){
-            document.body.style.backgroundColor = 'blue';
-        }
     </script>
 </body>
 
