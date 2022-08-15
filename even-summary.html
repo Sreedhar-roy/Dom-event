@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evan-summary html</title>
+</head>
+<body>
+    <h1>Final DOM even handlers</h1>
+    <h3 id="handler-status">default text</h3>
+    <p id="input-text-display">Default Input text</p>
+    <input id="input-field" type="text">
+    <button id="btn-update">update</button>
+    <br>
+    <br>
+    <button onclick="AddButton()">Handlde event by Add onclick function</button>
+    <button id="event-lisenter">Handle event by addEvenListener</button>
+    <script>
+        function AddButton(){
+            const handlerStatus = document.getElementById('handler-status');
+            handlerStatus.innerText = 'Handled by function attached on onclick attrubute';
+        }
+
+        // option  2
+
+        document.getElementById('event-lisenter').addEventListener('click', function(){
+            const handlerStatus = document.getElementById('handler-status');
+            handlerStatus.innerText = 'Text update by add event listener button';
+        })
+
+        // option 2 recap
+        document.getElementById('btn-update').addEventListener('click', function(){
+            const inputFiel = document.getElementById('input-field');
+            const inputText = inputFiel.value;
+
+            const p = document.getElementById('input-text-display');
+        p.innerText = inputText;
+        inputFiel.value = '';
+        })
+    </script>
+</body>
+</html>
